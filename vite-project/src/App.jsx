@@ -7,19 +7,18 @@ function App() {
 
 <div className="wrapper">
 		
-		
 			<div className="pop-exit" id="popExit">
 				<div className="pop-exit__container">
 					<div className="pop-exit__block">
 						<div className="pop-exit__ttl">
 							<h2>Выйти из аккаунта?</h2>
 						</div>
-						<htmlfor className="pop-exit__htmlfor" id="htmlforExit" action="#">
-							<div className="pop-exit__htmlfor-group">
+						<form className="pop-exit__form" id="formExit" action="#">
+							<div className="pop-exit__form-group">
 								<button className="pop-exit__exit-yes _hover01" id="exitYes"><a href="modal/signin.html">Да, выйти</a> </button>
 								<button className="pop-exit__exit-no _hover03" id="exitNo"><a href="main.html">Нет, остаться</a> </button>
 							</div>
-						</htmlfor>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -31,16 +30,16 @@ function App() {
 							<h3 className="pop-new-card__ttl">Создание задачи</h3>
 							<a href="#" className="pop-new-card__close">&#10006;</a>
 							<div className="pop-new-card__wrap">
-								<htmlfor className="pop-new-card__htmlfor htmlfor-new" id="htmlforNewCard" action="#">
-									<div className="htmlfor-new__block">
-										<label htmlFor="htmlforTitle" className="subttl">Название задачи</label>
-										<input className="htmlfor-new__input" type="text" name="name" id="htmlforTitle" placeholder="Введите название задачи..." autoFocus> </input>
+								<form className="pop-new-card__form form-new" id="formNewCard" action="#">
+									<div className="form-new__block">
+										<label htmlFor="formTitle" className="subttl">Название задачи</label>
+										<input className="form-new__input" type="text" name="name" id="formTitle" placeholder="Введите название задачи..." autoFocus />
 									</div>
-									<div className="htmlfor-new__block">
+									<div className="form-new__block">
 										<label htmlFor="textArea" className="subttl">Описание задачи</label>
-										<textarea className="htmlfor-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea>
+										<textarea className="form-new__area" name="text" id="textArea"  placeholder="Введите описание задачи..."></textarea>
 									</div>
-								</htmlfor>
+								</form>
 								<div className="pop-new-card__calendar calendar">
 									<p className="calendar__ttl subttl">Даты</p>									
 									<div className="calendar__block">
@@ -108,7 +107,7 @@ function App() {
 											</div>
 										</div>
 										
-										<input type="hidden" id="datepick_value" value="08.09.2023"> </input>
+									<input type="hidden" id="datepick_value" value="08.09.2023"/>
 										<div className="calendar__period">
 											<p className="calendar__p date-end">Выберите срок исполнения <span className="date-control"></span>.</p>
 										</div>
@@ -129,7 +128,7 @@ function App() {
 									</div>
 								</div>
 							</div>
-							<button className="htmlfor-new__create _hover01" id="btnCreate">Создать задачу</button>
+							<button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
 						</div>
 					</div>
 				</div>
@@ -166,12 +165,12 @@ function App() {
 								</div>
 							</div>
 							<div className="pop-browse__wrap">
-								<htmlfor className="pop-browse__htmlfor htmlfor-browse" id="htmlforBrowseCard" action="#">									
-									<div className="htmlfor-browse__block">
+								<form className="pop-browse__form form-browse" id="formBrowseCard" action="#">									
+									<div className="form-browse__block">
 										<label htmlFor="textArea01" className="subttl">Описание задачи</label>
-										<textarea className="htmlfor-browse__area" name="text" id="textArea01"  readOnly placeholder="Введите описание задачи..."></textarea>
+										<textarea className="form-browse__area" name="text" id="textArea01"  readOnly placeholder="Введите описание задачи..."></textarea>
 									</div>
-								</htmlfor>
+								</form>
 								<div className="pop-new-card__calendar calendar">
 									<p className="calendar__ttl subttl">Даты</p>
 									<div className="calendar__block">
@@ -239,7 +238,7 @@ function App() {
 											</div>
 										</div>
 								
-										<input type="hidden" id="datepick_value" value="08.09.2023"> </input>
+										<input type="hidden" id="datepick_value" value="08.09.2023"/>
 										<div className="calendar__period">
 											<p className="calendar__p date-end">Срок исполнения: <span className="date-control">09.09.23</span></p>
 										</div>
@@ -278,10 +277,10 @@ function App() {
 			<div className="container">
 				<div className="header__block">
 					<div className="header__logo _show _light">
-						<a href="" target="_self"><img src="images/logo.png" alt="logo"></img> </a>
+						<a href="" target="_self"><img src="images/logo.png" alt="logo"/></a>
 					</div>
 					<div className="header__logo _dark">
-						<a href="" target="_self"><img src="images/logo_dark.png" alt="logo"> </img></a>
+						<a href="" target="_self"><img src="images/logo_dark.png" alt="logo"/> </a>
 					</div>
 					<nav className="header__nav">
 						<button className="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
@@ -292,7 +291,7 @@ function App() {
 							<p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
 							<div className="pop-user-set__theme">
 								<p>Темная тема</p>
-								<input type="checkbox" className="checkbox" name="checkbox"> </input>
+								<input type="checkbox" className="checkbox" name="checkbox"/>
 							</div>
 							<button type="button" className="_hover03"><a href="#popExit">Выйти</a></button>
 						</div>
