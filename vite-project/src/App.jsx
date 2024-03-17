@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Header/Header";
 
 
 function App() {
@@ -273,7 +274,7 @@ function App() {
 			</div>
 		
 
-		<header className="header">
+		{/* <header className="header">
 			<div className="container">
 				<div className="header__block">
 					<div className="header__logo _show _light">
@@ -298,7 +299,9 @@ function App() {
 					</nav>					
 				</div>
 			</div>			
-		</header>
+		</header> */}
+
+		<Header/>
 		<main className="main">
 			<div className="container">
 				
