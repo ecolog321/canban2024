@@ -5,7 +5,7 @@ import UserButton from "./UserButton"
 
 function PopupUser () {
     return (
-        <div>
+        <div className="header__pop-user pop-user-set" id="user-set-target">
         <UserName/>
         <UserEmail/>
         <UserTheme/>
