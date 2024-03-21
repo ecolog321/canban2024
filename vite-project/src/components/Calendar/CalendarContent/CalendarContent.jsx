@@ -1,4 +1,4 @@
-import { CalendarCells } from "./CalendarCells/calendarCells";
+import { CalendarCells } from "./CalendarCells/CalendarCells";
 import { CalendarDays } from "./CalendarDays/CalendarDays";
 
 export function Calendarcontent() {
