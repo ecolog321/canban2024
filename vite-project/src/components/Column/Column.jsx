@@ -1,18 +1,18 @@
-import { Cards } from "../Card/Card"
+import { Card } from "../Card/Card"
 
-export const Column=()=>{
+export const Column=(title, taskList)=>{
+
+    
     return (
         <div className="main__column">
             <div className="column__title">
-                <p>Без статуса</p>
+                <p>{title}</p>
             </div>
             <div className="cards">
-            <Cards/>
-            <Cards/>
-            <Cards/>
-            <Cards/>
+                {taskList.map((task)=> <Card key={task.index}/>)}
             </div>
         </div>
+        
     )
    
 }

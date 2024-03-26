@@ -1,16 +1,32 @@
-import { Column } from "../Column/Column"
+import { cards } from "../../data";
+import { Column } from "../Column/Column";
 
-export const Main=()=>{
-    return  <main className="main">
-                <div className="container">
-                    <div className="main__block">
-                         <div className="main__content">
-                            <Column/>
-                            <Column/>
-                            <Column/>
-                            <Column/>
-                        </div>
-                     </div>
-                </div>
-            </main>
-}
+export const Main = () => {
+  const statusList = [
+    "Без статуса",
+    "Нужно сделать",
+    "В работе",
+    "Тестирование",
+    "Готово",
+  ];
+
+  /* const [tasks, setTasks] = useState(cards); */
+
+  return (
+    <main className="main">
+      <div className="container">
+        <div className="main__block">
+          <div className="main__content">
+            {statusList.map((status, index) => 
+              <Column
+              key={index}
+              status={status}
+              taskList={cards.filter((card)=>card.status===status)}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};

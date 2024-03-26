@@ -1,6 +1,10 @@
-function HeaderHref(tooglePopup) {
+function HeaderHref(TooglePopup) {
   return (
-    <a onClick={tooglePopup} href="#user-set-target" className="header__user _hover02">
+    <a
+      onClick={TooglePopup}
+      href="#user-set-target"
+      className="header__user _hover02"
+    >
       Ivan Ivanov
     </a>
   );

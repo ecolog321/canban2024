@@ -1,4 +1,4 @@
-export const Cards=()=>{
+export const Card=()=>{
     return  <div className="cards__item">
              
                 <div className="cards__card card">
