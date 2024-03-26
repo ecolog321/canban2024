@@ -334,6 +334,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
 }
 .pop-new-card__form {
   max-width: 370px;
@@ -777,7 +778,7 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
