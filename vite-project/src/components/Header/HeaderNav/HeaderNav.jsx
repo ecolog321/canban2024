@@ -4,16 +4,17 @@ import PopupUser from "../../Popups/PopupUser/PopupUser.jsx";
 import { useState } from "react";
 
 function HeaderNav() {
-
   const [showPopup, setShowPopup] = useState(false);
 
-  const TooglePopup = () => setShowPopup(!showPopup);
+  const tooglePopup = () => {
+    setShowPopup(!showPopup);
+  };
 
   return (
     <nav className="header__nav">
       <HeaderButtonNew />
-      <HeaderHref TooglePopup={TooglePopup}/>
-      <PopupUser />
+      <HeaderHref tooglePopup={tooglePopup} />
+      {showPopup && <PopupUser/>}
     </nav>
   );
 }

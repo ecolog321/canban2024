@@ -1,7 +1,7 @@
-function HeaderHref(TooglePopup) {
+function HeaderHref({tooglePopup}) {
   return (
     <a
-      onClick={TooglePopup}
+      onClick={tooglePopup}
       href="#user-set-target"
       className="header__user _hover02"
     >

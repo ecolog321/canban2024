@@ -10,8 +10,6 @@ export const Main = () => {
     "Готово",
   ];
 
-  /* const [tasks, setTasks] = useState(cards); */
-
   return (
     <main className="main">
       <div className="container">
@@ -20,7 +18,7 @@ export const Main = () => {
             {statusList.map((status, index) => 
               <Column
               key={index}
-              status={status}
+              title={status}
               taskList={cards.filter((card)=>card.status===status)}
               />
             )}

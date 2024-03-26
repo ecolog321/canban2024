@@ -1,6 +1,6 @@
 import { Card } from "../Card/Card"
 
-export const Column=(title, taskList)=>{
+export const Column=({title, taskList})=>{
 
     
     return (
@@ -9,7 +9,7 @@ export const Column=(title, taskList)=>{
                 <p>{title}</p>
             </div>
             <div className="cards">
-                {taskList.map((task)=> <Card key={task.index}/>)}
+                {taskList.map((task)=> <Card key={task.id} {...task}/>)}
             </div>
         </div>
         

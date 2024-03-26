@@ -5,29 +5,26 @@ import { PopNewCard } from "./components/Popups/PopNewCard/PopNewCard";
 import { PopupBrowse } from "./components/Popups/PopupBrowse/PopupBrowse";
 import { PopupExit } from "./components/Popups/PopupExit/PopupExit";
 
-
 function App() {
+  const addCard = {};
+
   return (
-   <>
+    <>
+      <div className="wrapper">
+        <PopupExit />
 
-<div className="wrapper">
-		
-		<PopupExit/>
+        <PopNewCard />
 
-		<PopNewCard/>
-		
-		<PopupBrowse/>
-		
-		<Header/>
+        <PopupBrowse />
 
-		<Main/>
-		
-    </div>
+        <Header />
 
-    <script src="js/script.js"></script>
+        <Main />
+      </div>
 
-   </>  
- )
-  }
+      <script src="js/script.js"></script>
+    </>
+  );
+}
 
 export default App;
