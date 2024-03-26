@@ -2,7 +2,20 @@ import { PopNewCardCalendar } from "./PopNewCardCalenar/PopNewCardCalendar";
 import { PopNewCardCategories } from "./PopNewCardCategories/PopNewCardCategories";
 import { PopNewCardForm } from "./PopNewCardForm/PopNewCardForm";
 
-export function PopNewCard() {
+export function PopNewCard({tasks,setTaskList}) {
+
+    function onClick() {
+        const newTask = {
+          id: tasks.length + 1,
+          theme: "Research",
+          title: "Новая задача",
+          date: "20.03.24",
+          status: "Без статуса",
+        };
+
+        setTaskList([...tasks,newTask])
+      }
+
     return (
         <div className="pop-new-card" id="popNewCard">
         <div className="pop-new-card__container">
@@ -16,7 +29,7 @@ export function PopNewCard() {
                         <PopNewCardCategories/>
                     </div>
                    
-                    <button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
+                    <button onClick={onClick} className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,6 @@
-import { cards } from "../../data";
 import { Column } from "../Column/Column";
 
-export const Main = () => {
+export const Main = ({ cards, isLoading }) => {
   const statusList = [
     "Без статуса",
     "Нужно сделать",
@@ -15,12 +14,18 @@ export const Main = () => {
       <div className="container">
         <div className="main__block">
           <div className="main__content">
-            {statusList.map((status, index) => 
-              <Column
-              key={index}
-              title={status}
-              taskList={cards.filter((card)=>card.status===status)}
-              />
+            {isLoading ? (
+              <p>Идет загрузка</p>
+            ) : (
+              <>
+                {statusList.map((status, index) => (
+                  <Column
+                    key={index}
+                    title={status}
+                    taskList={cards.filter((card) => card.status === status)}
+                  />
+                ))}
+              </>
             )}
           </div>
         </div>
